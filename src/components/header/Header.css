@@ -1,0 +1,309 @@
+.header {
+    position: relative;
+    background-image: url('../../static/bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 640px;
+}
+
+
+.content {
+}
+
+.overlay {
+    width: 70%;
+    height: 450px;
+    border-radius: 0 50px 0 50px; /* Use shorthand for border radius */
+    backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* Added padding for better spacing */
+}
+
+.title {
+    font-size: 2rem;
+    margin: 0 20px; /* Combined margins for cleaner code */
+    font-weight: 400;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin: 10px 20px;
+}
+
+.round img {
+    width: 100%; /* Make images responsive */
+    max-width: 400px; /* Max width for larger screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.round img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Box-shadow on hover */
+}
+
+.product-catalog {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 100;
+    cursor: pointer;
+    margin: 0px 20px ; /* Combined margins for cleaner code */
+    border-radius: 0 20px 0 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-catalog:hover {
+    background-color: #e5533c;
+    box-shadow: 0 0 20px rgba(227, 228, 237, 0.37);
+}
+
+.buttons {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    border: none;
+    height: 130px;
+    width: 100px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.sms,
+.robot {
+    color: orange;
+    font-size: 25px;
+    text-align: center;
+}
+
+.combined-buttons {
+    display: block;
+}
+
+.contact-supplier {
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cta-button:hover,
+.contact-supplier:hover {
+    color: orange;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1071px) {
+    
+    .title {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1.25rem;
+    }
+    .contact-supplier {
+        width: 90px; /* Adjusted width for smaller screens */
+        height: 90px; /* Adjusted height for smaller screens */
+        font-size: 12px; /* Smaller font size */
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .product-catalog {
+        padding: 12px 25px; /* Adjusted padding for smaller screens */
+        font-size: 17px; /* Slightly smaller font size */
+        margin: 0px 20px 0; /* Reduced margin for better layout */
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        height: 100vh; /* Full viewport height */
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    .round img {
+        width: 100%; /* Ensure image is responsive */
+        max-width: 240px; /* Cap width for larger screens */
+    }
+    .contact-supplier {
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .product-catalog {
+        padding: 15px 35px; /* Further adjusted padding */
+        font-size: 15px; /* Further reduced font size */
+        margin: 0px 20px 0; /* Further reduced margin */
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay{
+        width: 85%;
+        height: 70%;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    .round img {
+        width: 100%; /* Make images responsive */
+        max-width: 200px;
+    }
+    .contact-supplier {
+        width: 70px;
+        height: 70px;
+        font-size: 10px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .product-catalog {
+        padding: 15px 35px; /* Further adjusted padding */
+        font-size: 16px; /* Further reduced font size */
+        margin: 0px 20px 0; /* Adjusted margin */
+    }
+}
+
+@media (max-width: 650px) {
+    .overlay{
+        width: 80%;
+        height: 65%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    .round img {
+        width: 100%; /* Make images responsive */
+        max-width: 150px;
+    }
+    .contact-supplier {
+        width: 60px;
+        height: 60px;
+        font-size: 9px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .product-catalog {
+        padding: 13px 33px; /* Adjusted padding */
+        font-size: 15px; /* Adjusted font size */
+        margin: 0px 20px 0; /* Adjusted margin */
+    }
+}
+
+@media (max-width: 600px) {
+    .overlay {
+        width: 70%;
+        height: 55%;
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+        justify-content: flex-start; /* Align elements to the top */
+    }
+
+    .round {
+        order: 1; /* Ensure the image comes first */
+        text-align: center; /* Center the image */
+        margin-bottom: 10px; /* Add space between image and text */
+    }
+
+    .round img {
+        width: 100%; /* Make image responsive */
+        max-width: 120px;
+        margin-bottom: 10px; /* Add space below the image */
+    }
+
+    .title {
+        order: 2; /* Ensure the title comes after the image */
+        font-size: 1.35rem;
+        text-align: center; /* Center the title */
+        margin-top: 20px;
+    }
+
+    .subtitle {
+        order: 3; /* Ensure the subtitle comes after the title */
+        font-size: 1rem;
+        text-align: center; /* Center the subtitle */
+    }
+
+    .product-catalog {
+        padding: 10px 25px; /* Adjust padding */
+        font-size: 12px; /* Adjust font size */
+        margin: 0px 100px 0; /* Adjust margin */
+    }
+}
+@media (max-width : 500px){
+    .overlay{
+        height: 50%;    
+    }
+    .product-catalog{
+        width: 160px;
+        text-align: center;
+    }
+    .title{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 475px) {
+    .overlay{
+        height: 65%;
+    }
+    .title{
+        margin-top: 30px;
+    }
+
+}
+@media (max-width: 400px) {
+    .overlay{
+        text-align: center;
+    }
+    .title {
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+    .subtitle {
+        font-size: 0.8rem;
+    }
+    .round img {
+        width: 100%; /* Make images responsive */
+        max-width: 100px;
+    }
+    .contact-supplier {
+        width: 50px;
+        height: 50px;
+        font-size: 7px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .product-catalog {
+        padding: 10px 25px;
+        margin: 0px 20px;
+        font-size: 13px; /* Adjusted font size */
+    }
+}
